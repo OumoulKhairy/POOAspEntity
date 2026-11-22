@@ -1,0 +1,14 @@
+P5AspEntity - API minimale + EF Core + SQLite (.NET 10)
+
+Si votre SDK est .NET 8 (dotnet --list-sdks), dans P5AspEntity.csproj :
+  net10.0 -> net8.0
+  les deux paquets EntityFrameworkCore : 10.0.0 -> 8.0.0
+
+Commandes (dans le dossier P5AspEntity) :
+  dotnet tool install --global dotnet-ef
+  dotnet restore
+  dotnet ef migrations add InitialCreate
+  dotnet ef database update
+  dotnet run
+
+Puis ouvrir http://localhost:5281/swagger
